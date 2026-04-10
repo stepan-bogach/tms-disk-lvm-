@@ -5,14 +5,16 @@
 3. Создал по ошибке в 2 дисках раздела 3 в место 4 раздела 2/2 1/1, пользовался parted.
 
 4. Собрал vg с помощью команд sudo pvcreate tms-vg /диск/раздел
+   ![Alt text](https://github.com/stepan-bogach/tms-disk-lvm-/blob/main/photo_2026-04-08_16-38-37.jpg)
 
-5. Создал 2 lv с помощью sudo lvcreate -n (data/bkp) -L (размер) tms-vg
+6. Создал 2 lv с помощью sudo lvcreate -n (data/bkp) -L (размер) tms-vg
    Поменял ФС - mkfs.ext4 /dev/tms-gv/bkp, mkfs.xfs /dev/tms-gv/data
    Примонтировал lv к дир sudo mount /dev/tms-gv/* /opt/*
+   ![Alt text](https://github.com/stepan-bogach/tms-disk-lvm-/blob/main/photo_2026-04-08_16-40-17.jpg)
 
-6. Добавил раздел к vg с помощью команды sudo vgextend tms-vg /dev/sdc2
+8. Добавил раздел к vg с помощью команды sudo vgextend tms-vg /dev/sdc2
 
-7. Расширил lv sudo lvextend -l +100%FREE /dev/tms-vg/data
+9. Расширил lv sudo lvextend -l +100%FREE /dev/tms-vg/data
 
 # Из-за неверного интерпретирования задания сделал 3 раздела вместо 4 невыполнил пункт 7.8.9.
 # Так как не понял как можно создать еще раздел с учетом тогда что в шаге 6 расширили всю vg и диск  более не осталось.
