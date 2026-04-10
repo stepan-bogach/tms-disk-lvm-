@@ -1,6 +1,6 @@
 # tms-disk-lvm-
 1. Создал 2 диска через Virtual Box, перед этим сделал snapshop.
-https://github.com/stepan-bogach/tms-disk-lvm-/blob/main/photo_2026-04-08_16-35-15.jpg
+   ![Alt text](https://github.com/stepan-bogach/tms-disk-lvm-/blob/main/photo_2026-04-08_16-35-15.jpg)
 
 3. Создал по ошибке в 2 дисках раздела 3 в место 4 раздела 2/2 1/1, пользовался parted.
 
